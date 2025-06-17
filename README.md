@@ -1,6 +1,6 @@
 # Course Tracker App📈
 
-This is the frond-end repository for my course-tracker app. Course tracker app is my personal project to keep track of my learnings based on what I have learned from school. It analyzes my grades and suggests career paths update my courses and take notes of my subjects and projects during the school year. This helps boost my productivity as it inspires me to learn using my own application😊
+This is the back-end repository for my course-tracker app. Course tracker app is my personal project to keep track of my learnings based on what I have learned from school. It analyzes my grades and suggests career paths update my courses and take notes of my subjects and projects during the school year. This helps boost my productivity as it inspires me to learn using my own application😊
 
 ## Languages used🧑‍💻 :
 
