@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 
 @RestController
 @RequestMapping("/api/subjects")
-@CrossOrigin(origins = "*")
 public class SubjectController {
 
     @Autowired

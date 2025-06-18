@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "http://localhost:5174", allowCredentials = "true")
 public class UserController {
 
     @Autowired

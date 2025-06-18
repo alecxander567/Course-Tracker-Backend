@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/streak")
-@CrossOrigin(origins = "*")
 public class StreakController {
     @Autowired
     private StreakService streakService;
