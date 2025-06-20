@@ -7,6 +7,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.FetchType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.Column;
+import jakarta.persistence.Lob;
 
 @Entity
 public class Notes {
@@ -16,6 +19,9 @@ public class Notes {
     private Long id;
 
     private String title;
+
+    @Lob
+    @Column(columnDefinition = "TEXT")
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -31,7 +37,10 @@ public class Notes {
     public String getContent() { return content; }
     public void setContent(String content) { this.content = content; }
 
-    public User getUser() { return user; }
+    @JsonIgnore
+    public User getUser() {
+        return user;
+    }
     public void setUser(User user) { this.user = user; }
 
 }

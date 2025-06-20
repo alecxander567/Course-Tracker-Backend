@@ -2,7 +2,6 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +15,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/notes")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
 public class NoteController {
 
     @Autowired
@@ -39,6 +37,7 @@ public class NoteController {
                 .map(note -> {
                     note.setTitle(updatedNote.getTitle());
                     note.setContent(updatedNote.getContent());
+
                     Notes saved = noteRepo.save(note);
                     return ResponseEntity.ok(saved);
                 })
